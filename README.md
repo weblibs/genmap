@@ -12,6 +12,11 @@ can pass a `PREFIX` to the *make* command to override it:
 
 will install the script in */usr/local/bin*.
 
+## Dependencies
+
+- find
+- getopts
+
 
 ## Using
 
