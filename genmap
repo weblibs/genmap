@@ -1,12 +1,12 @@
-#!/usr/bin/sh
+#!/usr/bin/env sh
 
 version() {
-    echo "genmap v1.0.0"
+    echo "genmap v1.0.1"
 }
 
 usage() {
     cat <<EOF
-genmap v1.0.0
+genmap v1.0.1
 Usage: genmap [options] [path]
 genmap is a tool to generate sitemap.txt files
 
@@ -56,4 +56,4 @@ done
 
 [ -z "$DOMAIN" ] && echo "missing domain" && usage && exit 1
 
-find "$@" -type f -printf "$DOMAIN/%P\n"
+find "$@" -type f -exec printf "$DOMAIN/{}\n" \;
